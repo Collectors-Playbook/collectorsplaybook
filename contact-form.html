@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FZMJEC74W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7FZMJEC74W');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form - Collectors Playbook | Send Us a Message</title>
+    <meta name="description" content="Get in touch with Collectors Playbook. Send us your questions about sports cards, special requests, or general inquiries.">
+    <meta name="keywords" content="contact form, sports cards inquiry, collectors playbook contact, card requests">
+    <link rel="canonical" href="https://collectorsplaybook.com/contact-form.html">
+    
+    <!-- Font Awesome Pro -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .contact-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-navy);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--medium-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 0 3px rgba(244, 182, 67, 0.1);
+        }
+        
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            background-color: var(--primary-gold);
+            color: var(--primary-navy);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            margin-top: 2rem;
+        }
+        
+        .form-submit:hover {
+            background-color: var(--secondary-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(244, 182, 67, 0.3);
+        }
+        
+        .form-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .form-required {
+            color: #e74c3c;
+        }
+        
+        .form-note {
+            background-color: var(--light-gray);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            text-align: center;
+        }
+        
+        .form-success,
+        .form-error {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+            display: none;
+        }
+        
+        .form-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .form-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="navbar-brand" href="/">
+                <img src="logo.png" alt="Collectors Playbook Logo">
+                <span>Collectors Playbook</span>
+            </a>
+            <ul class="navbar-nav">
+                <li><a class="nav-link" href="/">Home</a></li>
+                <li><a class="nav-link" href="/all-cards.html">All Cards</a></li>
+                <li><a class="nav-link" href="/#featured">Featured</a></li>
+                <li><a class="nav-link" href="/#about">About</a></li>
+                <li><a class="nav-link nav-cta" href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <h1 class="section-title">Send Us a Message</h1>
+                <p class="section-subtitle">Have a question or special request? We'd love to hear from you!</p>
+            </div>
+            
+            <div class="contact-form-container">
+                <div class="form-success" id="formSuccess">
+                    <i class="fas fa-check-circle" style="font-size: 2rem; margin-bottom: 0.5rem; display: block;"></i>
+                    <strong>Thank you for your message!</strong><br>
+                    We'll get back to you as soon as possible.
+                </div>
+                
+                <div class="form-error" id="formError">
+                    <i class="fas fa-exclamation-circle" style="font-size: 2rem; margin-bottom: 0.5rem; display: block;"></i>
+                    <strong>Oops! Something went wrong.</strong><br>
+                    Please try again or contact us directly through our social media.
+                </div>
+                
+                <form id="contactForm" action="https://formspree.io/f/xpwrolyq" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="form-label">
+                            Your Name <span class="form-required">*</span>
+                        </label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            Email Address <span class="form-required">*</span>
+                        </label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">
+                            Subject <span class="form-required">*</span>
+                        </label>
+                        <input type="text" id="subject" name="subject" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">
+                            Message <span class="form-required">*</span>
+                        </label>
+                        <textarea id="message" name="message" class="form-textarea" required></textarea>
+                    </div>
+                    
+                    <!-- Hidden field for form replies -->
+                    <input type="hidden" name="_replyto" value="info@collectorsplaybook.com">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission">
+                    
+                    <button type="submit" class="form-submit" id="submitButton">
+                        <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                        Send Message
+                    </button>
+                </form>
+                
+                <div class="form-note">
+                    <p><strong>Note:</strong> We typically respond within 24 hours. For immediate assistance, please contact us through our <a href="/contact.html">social media channels</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Collectors Playbook</h4>
+                    <p>Your trusted marketplace for premium sports cards, operated by a young collector with passion.</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/CPlaybook68869" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/svgs/brands/x-twitter.svg" alt="X (Twitter)" width="28" height="28">
+                        </a>
+                        <a href="https://www.instagram.com/collectorsplaybook/" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/svgs/brands/instagram.svg" alt="Instagram" width="28" height="28">
+                        </a>
+                        <a href="https://www.facebook.com/collectorsplaybook" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/svgs/brands/facebook.svg" alt="Facebook" width="28" height="28">
+                        </a>
+                        <a href="https://www.ebay.com/usr/collectors-playbook-tx" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 640 512">
+                                <path fill="currentColor" d="M606 189.5l-54.8 109.9-54.9-109.9h-37.5l10.9 20.6c-11.5-19-35.9-26-63.3-26-31.8 0-67.9 8.7-71.5 43.1h33.7c1.4-13.8 15.7-21.8 35-21.8 26 0 41 9.6 41 33v3.4c-12.7 0-28 .1-41.7 .4-42.4 .9-69.6 10-76.7 34.4 1-5.2 1.5-10.6 1.5-16.2 0-52.1-39.7-76.2-75.4-76.2-21.3 0-43 5.5-58.7 24.2v-80.6h-32.1v169.5c0 10.3-.6 22.9-1.1 33.1h31.5c.7-6.3 1.1-12.9 1.1-19.5 13.6 16.6 35.4 24.9 58.7 24.9 36.9 0 64.9-21.9 73.3-54.2-.5 2.8-.7 5.8-.7 9 0 24.1 21.1 45 60.6 45 26.6 0 45.8-5.7 61.9-25.5 0 6.6 .3 13.3 1.1 20.2h29.8c-.7-8.2-1-17.5-1-26.8v-65.6c0-9.3-1.7-17.2-4.8-23.8l61.5 116.1-28.5 54.1h35.9L640 189.5zM243.7 313.8c-29.6 0-50.2-21.5-50.2-53.8 0-32.4 20.6-53.8 50.2-53.8 29.8 0 50.2 21.4 50.2 53.8 0 32.3-20.4 53.8-50.2 53.8zm200.9-47.3c0 30-17.9 48.4-51.6 48.4-25.1 0-35-13.4-35-25.8 0-19.1 18.1-24.4 47.2-25.3 13.1-.5 27.6-.6 39.4-.6zm-411.9 1.6h128.8v-8.5c0-51.7-33.1-75.4-78.4-75.4-56.8 0-83 30.8-83 77.6 0 42.5 25.3 74 82.5 74 31.4 0 68-11.7 74.4-46.1h-33.1c-12 35.8-87.7 36.7-91.2-21.6zm95-21.4H33.3c6.9-56.6 92.1-54.7 94.4 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/all-cards.html">All Cards</a></li>
+                        <li><a href="/#featured">Featured Cards</a></li>
+                        <li><a href="/#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                        <li><a href="/contact-form.html">Send Message</a></li>
+                        <li><a href="/terms.html">Terms & Conditions</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024-2025 Collectors Playbook. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Form Handler Script -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            const submitButton = document.getElementById('submitButton');
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 0.5rem;"></i> Sending...';
+        });
+        
+        // Handle form response (for Formspree or similar services)
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(e) {
+            // This will be handled by Formspree or your chosen service
+            // The script here is just for UI feedback
+        });
+    </script>
+    
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6c13ae2ab85a4e75962a3c26fa20159c"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
