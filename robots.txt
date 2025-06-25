@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://collectorsplaybook.com/sitemap.xml
+
+# Crawl-delay for bots
+User-agent: *
+Crawl-delay: 1
+
+# Allow search engines to index all pages
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+# Block any potential admin or private directories (if any exist in future)
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
