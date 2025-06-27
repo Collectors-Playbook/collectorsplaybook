@@ -28,8 +28,17 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Inline dropdown fix for testing -->
     <style>
+    /* Reset any JS-applied inline styles */
+    .dropdown-menu {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    /* Desktop hover functionality */
     @media (min-width: 769px) {
-        .navbar-nav .dropdown:hover .dropdown-menu {
+        .navbar-nav .dropdown:hover > .dropdown-menu {
             opacity: 1 !important;
             visibility: visible !important;
             transform: translateY(0) !important;
@@ -247,27 +256,12 @@
         
         
         
-        // Handle dropdown for both desktop and mobile
+        // Handle dropdown for mobile only
         const dropdown = document.querySelector('.dropdown');
         const dropdownToggle = document.querySelector('.dropdown-toggle');
         const dropdownMenu = document.querySelector('.dropdown-menu');
 
         if (dropdown && dropdownToggle && dropdownMenu) {
-            // For desktop - ensure hover works
-            if (window.innerWidth > 768) {
-                dropdown.addEventListener('mouseenter', function() {
-                    dropdownMenu.style.opacity = '1';
-                    dropdownMenu.style.visibility = 'visible';
-                    dropdownMenu.style.transform = 'translateY(0)';
-                });
-                
-                dropdown.addEventListener('mouseleave', function() {
-                    dropdownMenu.style.opacity = '0';
-                    dropdownMenu.style.visibility = 'hidden';
-                    dropdownMenu.style.transform = 'translateY(-10px)';
-                });
-            }
-            
             // For mobile - click toggle
             dropdownToggle.addEventListener('click', function(e) {
                 e.preventDefault();
