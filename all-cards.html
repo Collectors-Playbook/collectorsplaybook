@@ -37,12 +37,24 @@
                 <img src="logo.png" alt="Collectors Playbook Logo">
                 <span>Collectors Playbook</span>
             </a>
-            <ul class="navbar-nav">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-nav" id="navbarNav">
                 <li><a class="nav-link" href="index.html">Home</a></li>
                 <li><a class="nav-link" href="all-cards.html">All Cards</a></li>
-                <li><a class="nav-link" href="index.html#featured">Featured</a></li>
-                <li><a class="nav-link" href="index.html#about">About</a></li>
-                <!-- <li><a class="nav-link nav-cta" href="#newsletter">Sign Up</a></li> -->
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" onclick="return false;">Resources</a>
+                    <div class="dropdown-menu">
+                        <a href="guide.html">Collecting Guide</a>
+                        <a href="grading-guide.html">Grading Guide</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </li>
+                <li><a class="nav-link nav-cta" href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -87,6 +99,13 @@
                     <option value="bgs">BGS Graded</option>
                     <option value="raw">Ungraded</option>
                 </select>
+                <select style="padding: 0.75rem; border: 1px solid var(--medium-gray); border-radius: 8px; background: white; font-size: 1rem;" id="sortFilter">
+                    <option value="">Sort By</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="newest">Newest First</option>
+                    <option value="sport">Sport</option>
+                </select>
                 <input type="text" style="padding: 0.75rem; border: 1px solid var(--medium-gray); border-radius: 8px; background: white; font-size: 1rem;" id="searchFilter" placeholder="Search cards...">
             </div>
         </div>
@@ -98,7 +117,7 @@
             <div class="product-grid" id="cardsGrid">
                 <!-- Card 1: Caitlin Clark -->
                 <a href="https://www.ebay.com/itm/187362456989" class="product-card" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ebayimg.com/images/g/NMkAAOSwoatoXBtn/s-l1600.png" class="product-image" alt="Caitlin Clark">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f0f0f0'/%3E%3C/svg%3E" data-src="https://i.ebayimg.com/images/g/NMkAAOSwoatoXBtn/s-l1600.png" class="product-image" alt="Caitlin Clark" loading="lazy">
                     <div class="product-info">
                         <span class="product-badge">PSA 10</span>
                         <h3 class="product-title">2022 Bowman University</h3>
@@ -111,7 +130,7 @@
 
                 <!-- Card 2: Giratina -->
                 <a href="https://www.ebay.com/itm/187358671608" class="product-card" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ebayimg.com/images/g/xB8AAOSw95doXTSG/s-l1600.png" class="product-image" alt="Giratina V">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f0f0f0'/%3E%3C/svg%3E" data-src="https://i.ebayimg.com/images/g/xB8AAOSw95doXTSG/s-l1600.png" class="product-image" alt="Giratina V" loading="lazy">
                     <div class="product-info">
                         <span class="product-badge">PSA 10</span>
                         <h3 class="product-title">2022 Pokemon Lost Origin</h3>
@@ -124,7 +143,7 @@
 
                 <!-- Card 3: Wembanyama -->
                 <a href="https://www.ebay.com/itm/187358555890" class="product-card" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ebayimg.com/images/g/LOYAAOSw7PRoXTXT/s-l1600.png" class="product-image" alt="Victor Wembanyama">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f0f0f0'/%3E%3C/svg%3E" data-src="https://i.ebayimg.com/images/g/LOYAAOSw7PRoXTXT/s-l1600.png" class="product-image" alt="Victor Wembanyama" loading="lazy">
                     <div class="product-info">
                         <span class="product-badge">#/35</span>
                         <h3 class="product-title">2023-24 Topps Motif</h3>
@@ -137,7 +156,7 @@
 
                 <!-- Card 4: Satchel Paige -->
                 <a href="https://www.ebay.com/itm/187358608380" class="product-card" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ebayimg.com/images/g/eAoAAOSwr2RoXTTc/s-l1600.png" class="product-image" alt="Satchel Paige">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f0f0f0'/%3E%3C/svg%3E" data-src="https://i.ebayimg.com/images/g/eAoAAOSwr2RoXTTc/s-l1600.png" class="product-image" alt="Satchel Paige" loading="lazy">
                     <div class="product-info">
                         <span class="product-badge graded">SGC 1.5</span>
                         <h3 class="product-title">1953 Topps #220</h3>
@@ -150,7 +169,7 @@
 
                 <!-- Card 5: Sidy Cissoko -->
                 <a href="https://www.ebay.com/itm/187358306275" class="product-card" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ebayimg.com/images/g/ULcAAOSwvqFoXTVq/s-l1600.png" class="product-image" alt="Sidy Cissoko">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f0f0f0'/%3E%3C/svg%3E" data-src="https://i.ebayimg.com/images/g/ULcAAOSwvqFoXTVq/s-l1600.png" class="product-image" alt="Sidy Cissoko" loading="lazy">
                     <div class="product-info">
                         <span class="product-badge">ULTRA RARE #4/10</span>
                         <h3 class="product-title">2024 Topps Motif</h3>
@@ -163,7 +182,7 @@
 
                 <!-- Card 6: Xavier Worthy -->
                 <a href="https://www.ebay.com/itm/187359691524" class="product-card" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ebayimg.com/images/g/WGcAAOSw8BJoXTaJ/s-l1600.png" class="product-image" alt="Xavier Worthy">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f0f0f0'/%3E%3C/svg%3E" data-src="https://i.ebayimg.com/images/g/WGcAAOSw8BJoXTaJ/s-l1600.png" class="product-image" alt="Xavier Worthy" loading="lazy">
                     <div class="product-info">
                         <span class="product-badge">MAGENTA #007/150</span>
                         <h3 class="product-title">2024 Topps Inception</h3>
@@ -176,7 +195,7 @@
 
                 <!-- Card 7: Christian Encarnacion-Strand -->
                 <a href="https://www.ebay.com/itm/187359808205" class="product-card" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ebayimg.com/images/g/AyIAAOSwlMZoXTa9/s-l1600.png" class="product-image" alt="Christian Encarnacion-Strand">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f0f0f0'/%3E%3C/svg%3E" data-src="https://i.ebayimg.com/images/g/AyIAAOSwlMZoXTa9/s-l1600.png" class="product-image" alt="Christian Encarnacion-Strand" loading="lazy">
                     <div class="product-info">
                         <span class="product-badge">REFRACTOR #121/499</span>
                         <h3 class="product-title">2024 Topps Chrome RC</h3>
@@ -189,7 +208,7 @@
 
                 <!-- Card 8: Ladd McConkey -->
                 <a href="https://www.ebay.com/itm/187359681666" class="product-card" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ebayimg.com/images/g/hHgAAOSwtP5oWVhq/s-l1600.jpg" class="product-image" alt="Ladd McConkey">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f0f0f0'/%3E%3C/svg%3E" data-src="https://i.ebayimg.com/images/g/hHgAAOSwtP5oWVhq/s-l1600.jpg" class="product-image" alt="Ladd McConkey" loading="lazy">
                     <div class="product-info">
                         <span class="product-badge">MAGENTA #/99</span>
                         <h3 class="product-title">2024 Topps Inception</h3>
@@ -202,7 +221,7 @@
                 
                 <!-- Card 9: Jalen McMillan -->
                 <a href="https://www.ebay.com/itm/187358579768" class="product-card" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ebayimg.com/images/g/-d0AAOSwUK9oXTUL/s-l1600.png" class="product-image" alt="Jalen McMillan">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f0f0f0'/%3E%3C/svg%3E" data-src="https://i.ebayimg.com/images/g/-d0AAOSwUK9oXTUL/s-l1600.png" class="product-image" alt="Jalen McMillan" loading="lazy">
                     <div class="product-info">
                         <span class="product-badge">#056/125</span>
                         <h3 class="product-title">2024 Topps Inception</h3>
@@ -215,7 +234,7 @@
 
                 <!-- Card 10: Noah Clowney -->
                 <a href="https://www.ebay.com/itm/187358303855" class="product-card" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ebayimg.com/images/g/fC4AAOSwG29oXTWm/s-l1600.png" class="product-image" alt="Noah Clowney">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f0f0f0'/%3E%3C/svg%3E" data-src="https://i.ebayimg.com/images/g/fC4AAOSwG29oXTWm/s-l1600.png" class="product-image" alt="Noah Clowney" loading="lazy">
                     <div class="product-info">
                         <span class="product-badge">AUTO #17/49</span>
                         <h3 class="product-title">2024 Topps Motif</h3>
@@ -292,13 +311,14 @@
 
     <!-- JavaScript -->
     
-    <!-- Custom JavaScript for filtering -->
+    <!-- Custom JavaScript for filtering and lazy loading -->
     <script>
         // Get all filter elements
         const searchFilter = document.getElementById('searchFilter');
         const sportFilter = document.getElementById('sportFilter');
         const priceFilter = document.getElementById('priceFilter');
         const gradeFilter = document.getElementById('gradeFilter');
+        const sortFilter = document.getElementById('sortFilter');
         
         // Function to apply all filters
         function applyFilters() {
@@ -370,6 +390,52 @@
                 // Show or hide the card
                 card.style.display = showCard ? 'block' : 'none';
             });
+            
+            // Apply sorting after filtering
+            applySorting();
+        }
+        
+        // Function to apply sorting
+        function applySorting() {
+            const sortValue = sortFilter.value;
+            const cardsGrid = document.getElementById('cardsGrid');
+            const visibleCards = Array.from(cardsGrid.querySelectorAll('.product-card')).filter(card => card.style.display !== 'none');
+            
+            if (sortValue && visibleCards.length > 0) {
+                let sortedCards = [...visibleCards];
+                
+                switch(sortValue) {
+                    case 'price-high':
+                        sortedCards.sort((a, b) => {
+                            const priceA = parseInt(a.querySelector('.product-price').textContent.replace('$', '').replace(',', ''));
+                            const priceB = parseInt(b.querySelector('.product-price').textContent.replace('$', '').replace(',', ''));
+                            return priceB - priceA;
+                        });
+                        break;
+                    case 'price-low':
+                        sortedCards.sort((a, b) => {
+                            const priceA = parseInt(a.querySelector('.product-price').textContent.replace('$', '').replace(',', ''));
+                            const priceB = parseInt(b.querySelector('.product-price').textContent.replace('$', '').replace(',', ''));
+                            return priceA - priceB;
+                        });
+                        break;
+                    case 'sport':
+                        sortedCards.sort((a, b) => {
+                            const titleA = a.querySelector('.product-title').textContent.toLowerCase();
+                            const titleB = b.querySelector('.product-title').textContent.toLowerCase();
+                            return titleA.localeCompare(titleB);
+                        });
+                        break;
+                    case 'newest':
+                        // Keep original order (newest first)
+                        break;
+                }
+                
+                // Re-append sorted cards
+                sortedCards.forEach(card => {
+                    cardsGrid.appendChild(card);
+                });
+            }
         }
         
         // Add event listeners to all filters
@@ -377,6 +443,71 @@
         sportFilter.addEventListener('change', applyFilters);
         priceFilter.addEventListener('change', applyFilters);
         gradeFilter.addEventListener('change', applyFilters);
+        sortFilter.addEventListener('change', applyFilters);
+        
+        // Lazy loading implementation
+        const images = document.querySelectorAll('img[data-src]');
+        
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+    </script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navbarNav = document.getElementById('navbarNav');
+        
+        mobileMenuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navbarNav.classList.toggle('active');
+        });
+        
+        const navLinks = navbarNav.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                navbarNav.classList.remove('active');
+            });
+        });
+        
+        // Handle dropdown toggle on mobile
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdown = document.querySelector('.dropdown');
+        
+        if (dropdownToggle) {
+            dropdownToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (window.innerWidth <= 768) {
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+        
+        // Close dropdown when clicking dropdown links on mobile
+        const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    mobileMenuToggle.classList.remove('active');
+                    navbarNav.classList.remove('active');
+                    dropdown.classList.remove('active');
+                }
+            });
+        });
+    });
     </script>
     
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6c13ae2ab85a4e75962a3c26fa20159c"}'></script><!-- End Cloudflare Web Analytics -->

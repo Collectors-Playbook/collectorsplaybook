@@ -97,12 +97,24 @@
                 <img src="logo.png" alt="Collectors Playbook Logo">
                 <span>Collectors Playbook</span>
             </a>
-            <ul class="navbar-nav">
-                <li><a class="nav-link" href="#home">Home</a></li>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a class="nav-link" href="index.html">Home</a></li>
                 <li><a class="nav-link" href="all-cards.html">All Cards</a></li>
-                <li><a class="nav-link" href="#featured">Featured</a></li>
-                <li><a class="nav-link" href="#about">About</a></li>
-                <!-- <li><a class="nav-link nav-cta" href="#newsletter">Sign Up</a></li> -->
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" onclick="return false;">Resources</a>
+                    <div class="dropdown-menu">
+                        <a href="guide.html">Collecting Guide</a>
+                        <a href="grading-guide.html">Grading Guide</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </li>
+                <li><a class="nav-link nav-cta" href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -149,7 +161,7 @@
             </div>
             <div class="product-grid">
                 <a href="https://www.ebay.com/itm/187358671608" class="product-card" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ebayimg.com/images/g/xB8AAOSw95doXTSG/s-l1600.png" class="product-image" alt="Giratina V">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f0f0f0'/%3E%3C/svg%3E" data-src="https://i.ebayimg.com/images/g/xB8AAOSw95doXTSG/s-l1600.png" class="product-image" alt="Giratina V" loading="lazy">
                     <div class="product-info">
                         <span class="product-badge">PSA 10 GEM MINT</span>
                         <h3 class="product-title">2022 Pokemon Lost Origin</h3>
@@ -160,7 +172,7 @@
                     </div>
                 </a>
                 <a href="https://www.ebay.com/itm/187358555890" class="product-card" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ebayimg.com/images/g/LOYAAOSw7PRoXTXT/s-l1600.png" class="product-image" alt="Victor Wembanyama">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f0f0f0'/%3E%3C/svg%3E" data-src="https://i.ebayimg.com/images/g/LOYAAOSw7PRoXTXT/s-l1600.png" class="product-image" alt="Victor Wembanyama" loading="lazy">
                     <div class="product-info">
                         <span class="product-badge">ULTRA RARE #/35</span>
                         <h3 class="product-title">2023-24 Topps Motif</h3>
@@ -171,7 +183,7 @@
                     </div>
                 </a>
                 <a href="https://www.ebay.com/itm/187358608380" class="product-card" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ebayimg.com/images/g/eAoAAOSwr2RoXTTc/s-l1600.png" class="product-image" alt="Satchel Paige">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f0f0f0'/%3E%3C/svg%3E" data-src="https://i.ebayimg.com/images/g/eAoAAOSwr2RoXTTc/s-l1600.png" class="product-image" alt="Satchel Paige" loading="lazy">
                     <div class="product-info">
                         <span class="product-badge graded">SGC 1.5 VINTAGE</span>
                         <h3 class="product-title">1953 Topps #220</h3>
@@ -223,24 +235,6 @@
     </section> -->
 
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Story</h2>
-                <p class="section-subtitle">A young collector's journey into entrepreneurship</p>
-            </div>
-            <div class="about-content">
-                <p class="about-text">Collectors Playbook is the passion project of a 12-year-old sports card enthusiast who transformed a love for collecting into a growing business. With a sharp eye for standout rookies, rare inserts, and modern must-haves, every card is handpicked with care and excitement.</p>
-                
-                <p class="about-text">What makes Collectors Playbook special isn't just the quality of the cards—it's the story behind them. This isn't a faceless storefront flipping inventory. It's a young collector chasing a dream, learning the ins and outs of entrepreneurship, and sharing a lifelong passion with others who love the hobby.</p>
-                
-                <p class="about-text">Whether you're a veteran collector or just starting out, you'll find fair pricing, honest listings, and a personal touch in every deal. At Collectors Playbook, collecting isn't just a business—it's a joy we're proud to share.</p>
-                
-                <a href="all-cards.html" class="btn btn-primary">Browse Our Collection</a>
-            </div>
-        </div>
-    </section>
 
     <!-- Newsletter -->
     <!-- <section id="newsletter" class="py-5 bg-primary text-white">
@@ -332,7 +326,7 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="all-cards.html">All Cards</a></li>
                         <li><a href="#featured">Featured Cards</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="/about.html">About Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -351,6 +345,71 @@
     </footer>
 
     <!-- JavaScript -->
+    <script>
+        // Lazy loading implementation
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img[data-src]');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            }, {
+                rootMargin: '50px 0px',
+                threshold: 0.01
+            });
+            
+            images.forEach(img => imageObserver.observe(img));
+            
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navbarNav = document.getElementById('navbarNav');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navbarNav.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking a link
+            const navLinks = navbarNav.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuToggle.classList.remove('active');
+                    navbarNav.classList.remove('active');
+                });
+            });
+            
+            // Handle dropdown toggle on mobile
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (dropdownToggle) {
+                dropdownToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (window.innerWidth <= 768) {
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+            
+            // Close dropdown when clicking dropdown links on mobile
+            const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        mobileMenuToggle.classList.remove('active');
+                        navbarNav.classList.remove('active');
+                        dropdown.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
     
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6c13ae2ab85a4e75962a3c26fa20159c"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

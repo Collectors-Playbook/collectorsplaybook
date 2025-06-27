@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FZMJEC74W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7FZMJEC74W');
+    </script>
+    <!-- Google tag (gtag.js) -->  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17265705932"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17265705932');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Grading Guide - Collectors Playbook | PSA, BGS, SGC Explained</title>
+    <meta name="description" content="Complete guide to card grading. Learn about PSA, BGS, and SGC grading scales, submission process, costs, and how grading affects card values.">
+    <link rel="canonical" href="https://collectorsplaybook.com/grading-guide.html">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .grade-scale {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .grade-item {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            border-radius: 12px;
+            background-color: white;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            box-shadow: var(--card-shadow);
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .grade-item:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+        }
+        .grade-item h4 {
+            color: var(--primary-navy);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .grade-item p {
+            margin: 0.25rem 0;
+            color: var(--primary-navy);
+        }
+        .grade-item small {
+            color: var(--text-gray);
+            line-height: 1.4;
+            font-size: 0.8rem;
+            display: block;
+            margin-top: 0.5rem;
+        }
+        .grade-10 { background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); }
+        .grade-9 { background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%); }
+        .grade-8 { background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); }
+        .grade-7 { background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); }
+        .grade-6 { background: linear-gradient(135deg, #f5f5f5 0%, #e9ecef 100%); }
+        .grade-5 { background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%); }
+        .grade-4 { background: linear-gradient(135deg, #dee2e6 0%, #ced4da 100%); }
+        .grade-3 { background: linear-gradient(135deg, #ced4da 0%, #adb5bd 100%); }
+        .grade-2 { background: linear-gradient(135deg, #adb5bd 0%, #868e96 100%); }
+        .grade-1 { background: linear-gradient(135deg, #868e96 0%, #495057 100%); }
+        .grade-1 h4, .grade-1 small, .grade-1 p { color: white; }
+        .grade-2 h4, .grade-2 small, .grade-2 p { color: white; }
+        .comparison-table {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 1.25rem;
+            text-align: left;
+            border: 1px solid var(--medium-gray);
+        }
+        .comparison-table th {
+            background-color: var(--primary-navy);
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .comparison-table td {
+            color: var(--text-gray);
+        }
+        .comparison-table td strong {
+            color: var(--primary-navy);
+        }
+        .comparison-table tr:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+        .comparison-table tr:hover {
+            background-color: #e8f4f8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="navbar-brand" href="/">
+                <img src="logo.png" alt="Collectors Playbook Logo">
+                <span>Collectors Playbook</span>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-nav" id="navbarNav">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="all-cards.html">All Cards</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" onclick="return false;">Resources</a>
+                    <div class="dropdown-menu">
+                        <a href="guide.html">Collecting Guide</a>
+                        <a href="grading-guide.html">Grading Guide</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </li>
+                <li><a class="nav-link nav-cta" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="padding: 3rem 0; background: linear-gradient(135deg, var(--primary-navy) 0%, var(--light-navy) 100%);">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Card Grading 101</h1>
+                <p class="section-subtitle">Everything you need to know about PSA, BGS, SGC and card grading</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Card Grading -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What is Card Grading?</h2>
+                <p class="section-subtitle">Understanding professional card authentication and evaluation</p>
+            </div>
+            <div class="about-content">
+                <p class="about-text">
+                    Card grading is the process of having your cards professionally evaluated and authenticated by third-party companies. Graded cards receive a numerical grade (typically 1-10) based on their condition, and are sealed in tamper-proof cases called "slabs."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Grade Cards -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Grade Your Cards?</h2>
+                <p class="section-subtitle">The benefits of professional grading</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3 class="feature-title">Authentication</h3>
+                    <p class="feature-description">Ensures your card is genuine and not counterfeit</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Protection</h3>
+                    <p class="feature-description">Sealed in tamper-proof protective cases</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Value</h3>
+                    <p class="feature-description">Graded cards typically sell for more</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">Liquidity</h3>
+                    <p class="feature-description">Easier to sell with established grade</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PSA Grading Scale -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">PSA Grading Scale</h2>
+                <p class="section-subtitle">PSA (Professional Sports Authenticator) is the most popular grading service</p>
+            </div>
+            
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div class="grade-scale">
+                    <div class="grade-item grade-10">
+                        <h4>PSA 10</h4>
+                        <p style="font-weight: 600;">GEM MINT</p>
+                        <small>Four sharp corners<br>Perfect centering<br>No surface issues<br>Pristine edges</small>
+                    </div>
+                    <div class="grade-item grade-9">
+                        <h4>PSA 9</h4>
+                        <p style="font-weight: 600;">MINT</p>
+                        <small>One minor flaw allowed<br>55/45 to 60/40 centering<br>Slight print spot OK<br>Corners sharp to naked eye</small>
+                    </div>
+                    <div class="grade-item grade-8">
+                        <h4>PSA 8</h4>
+                        <p style="font-weight: 600;">NM-MT</p>
+                        <small>65/35 to 70/30 centering<br>Minor corner wear visible<br>Slight surface wear<br>Light edge chipping OK</small>
+                    </div>
+                    <div class="grade-item grade-7">
+                        <h4>PSA 7</h4>
+                        <p style="font-weight: 600;">NM</p>
+                        <small>70/30 centering or better<br>Slight corner fraying<br>Minor surface scratches<br>Slight edge wear</small>
+                    </div>
+                    <div class="grade-item grade-6">
+                        <h4>PSA 6</h4>
+                        <p style="font-weight: 600;">EX-MT</p>
+                        <small>Visible surface wear<br>75/25 centering allowed<br>Noticeable corner wear<br>Minor printing defects</small>
+                    </div>
+                    <div class="grade-item grade-5">
+                        <h4>PSA 5</h4>
+                        <p style="font-weight: 600;">EX</p>
+                        <small>Obvious corner rounding<br>80/20 centering or better<br>Surface scratches visible<br>Loss of original gloss</small>
+                    </div>
+                    <div class="grade-item grade-4">
+                        <h4>PSA 4</h4>
+                        <p style="font-weight: 600;">VG-EX</p>
+                        <small>Rounded corners<br>85/15 centering allowed<br>Light creasing possible<br>Noticeable surface wear</small>
+                    </div>
+                    <div class="grade-item grade-3">
+                        <h4>PSA 3</h4>
+                        <p style="font-weight: 600;">VG</p>
+                        <small>Heavy corner wear<br>90/10 centering OK<br>Minor creases<br>Some staining allowed</small>
+                    </div>
+                    <div class="grade-item grade-2">
+                        <h4>PSA 2</h4>
+                        <p style="font-weight: 600;">GOOD</p>
+                        <small>Major creasing<br>90/10 centering or worse<br>Paper loss possible<br>Heavy staining OK</small>
+                    </div>
+                    <div class="grade-item grade-1">
+                        <h4>PSA 1</h4>
+                        <p style="font-weight: 600;">POOR</p>
+                        <small>Severe damage<br>Missing pieces OK<br>Heavy creases/tears<br>Major staining</small>
+                    </div>
+                </div>
+                
+                <div style="background-color: #fff3cd; padding: 1.5rem; border-radius: 12px; margin-top: 2rem; text-align: center;">
+                    <p style="margin: 0;"><strong>Note:</strong> PSA 10s are not perfect under magnification. They can have minor printing defects but must have perfect centering, corners, edges, and surface.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Grading Company Comparison</h2>
+                <p class="section-subtitle">Choose the right grading service for your cards</p>
+            </div>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                    
+                    <div class="comparison-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Best For</th>
+                                    <th>Turnaround</th>
+                                    <th>Base Price</th>
+                                    <th>Market Premium</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>PSA</strong></td>
+                                    <td>Vintage, Pokemon, Modern Sports</td>
+                                    <td>30-120 days</td>
+                                    <td>$25-50+</td>
+                                    <td>Highest</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>BGS</strong></td>
+                                    <td>Modern Sports, Subgrades</td>
+                                    <td>20-60 days</td>
+                                    <td>$22-40+</td>
+                                    <td>High for 9.5+</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SGC</strong></td>
+                                    <td>Vintage, Fast Service</td>
+                                    <td>5-20 days</td>
+                                    <td>$12-30+</td>
+                                    <td>Moderate</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>CGC</strong></td>
+                                    <td>Pokemon, TCG Cards</td>
+                                    <td>30-90 days</td>
+                                    <td>$15-25+</td>
+                                    <td>Growing</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <p class="about-text" style="margin-top: 1rem; text-align: center;">
+                        <strong>Prices vary based on:</strong> Card value, turnaround time, and membership status. Bulk submissions offer discounts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Prepare Cards -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Preparing Cards for Grading</h2>
+                <p class="section-subtitle">Best practices for submission success</p>
+            </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                        <div style="background-color: var(--light-gray); padding: 2rem; border-radius: 12px;">
+                            <h3 style="color: var(--primary-navy); margin-bottom: 1rem;">
+                                <i class="fas fa-check" style="color: var(--primary-gold);"></i> Do's
+                            </h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;">✓ Use penny sleeves + Card Savers</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Clean cards with microfiber cloth</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Check centering with ruler</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Inspect under good lighting</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Submit similar value cards together</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Take photos before sending</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background-color: #f8d7da; padding: 2rem; border-radius: 12px;">
+                            <h3 style="color: var(--primary-navy); margin-bottom: 1rem;">
+                                <i class="fas fa-times" style="color: #dc3545;"></i> Don'ts
+                            </h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;">✗ Don't use toploaders for submissions</li>
+                                <li style="margin-bottom: 0.5rem;">✗ Don't touch card surfaces</li>
+                                <li style="margin-bottom: 0.5rem;">✗ Don't try to "clean" with liquids</li>
+                                <li style="margin-bottom: 0.5rem;">✗ Don't submit damaged cards</li>
+                                <li style="margin-bottom: 0.5rem;">✗ Don't rush the process</li>
+                                <li style="margin-bottom: 0.5rem;">✗ Don't overgrade your cards</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- When to Grade -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">When Should You Grade?</h2>
+                <p class="section-subtitle">Making smart grading decisions</p>
+            </div>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                    
+                    <div style="background-color: #d4edda; padding: 2rem; border-radius: 12px; margin-bottom: 1rem;">
+                        <h3 style="color: var(--primary-navy);">Grade When:</h3>
+                        <ul style="margin-left: 2rem; line-height: 1.8;">
+                            <li>Card value exceeds $100+ raw</li>
+                            <li>You believe it will grade 8 or higher</li>
+                            <li>It's a key rookie or vintage card</li>
+                            <li>You plan to sell the card</li>
+                            <li>For personal collection display</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background-color: #f8d7da; padding: 2rem; border-radius: 12px;">
+                        <h3 style="color: var(--primary-navy);">Skip Grading When:</h3>
+                        <ul style="margin-left: 2rem; line-height: 1.8;">
+                            <li>Card has obvious damage</li>
+                            <li>Grading costs exceed potential value increase</li>
+                            <li>Modern base cards under $50</li>
+                            <li>You need quick liquidity</li>
+                            <li>Card has sentimental value only</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submission Process -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Submission Process</h2>
+                <p class="section-subtitle">Step-by-step guide to grading your cards</p>
+            </div>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                    
+                    <ol style="margin-left: 2rem; line-height: 2;">
+                        <li><strong>Create Account:</strong> Register on grading company website</li>
+                        <li><strong>Select Service Level:</strong> Choose based on value and turnaround needs</li>
+                        <li><strong>Fill Submission Form:</strong> List each card with accurate details</li>
+                        <li><strong>Package Carefully:</strong> Use Card Savers and bubble mailers</li>
+                        <li><strong>Ship Insured:</strong> Always insure for full declared value</li>
+                        <li><strong>Track Progress:</strong> Monitor status online</li>
+                        <li><strong>Receive Grades:</strong> Cards return in protective slabs</li>
+                    </ol>
+                    
+                    <div style="background-color: var(--light-gray); padding: 2rem; border-radius: 12px; margin-top: 2rem; text-align: center;">
+                        <p style="margin: 0; font-size: 1.1rem;"><strong>Pro Tip:</strong> Join grading company memberships for discounts and free gradings. Consider group submissions with other collectors to save on shipping.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Understanding Subgrades -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Understanding BGS Subgrades</h2>
+                <p class="section-subtitle">BGS provides subgrades for four categories</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📐</div>
+                    <h3 class="feature-title">Centering</h3>
+                    <p class="feature-description">Front/back alignment</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3 class="feature-title">Corners</h3>
+                    <p class="feature-description">Sharpness and wear</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📏</div>
+                    <h3 class="feature-title">Edges</h3>
+                    <p class="feature-description">Chipping and whitening</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3 class="feature-title">Surface</h3>
+                    <p class="feature-description">Scratches and print defects</p>
+                </div>
+            </div>
+            <div class="about-content" style="margin-top: 3rem;">
+                <p class="about-text" style="text-align: center;">
+                    <strong>BGS Black Label:</strong> The holy grail - all four subgrades must be perfect 10s. These command massive premiums.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Buy Graded Cards?</h2>
+            <p class="cta-subtitle">Skip the wait and risk - browse our selection of pre-graded cards!</p>
+            <div class="cta-buttons">
+                <a href="/all-cards.html" class="btn btn-navy">Browse Graded Cards</a>
+                <a href="/contact.html" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Collectors Playbook</h4>
+                    <p>Your trusted marketplace for premium sports cards, operated by a young collector with passion.</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/CPlaybookTX" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/svgs/brands/x-twitter.svg" alt="X (Twitter)" width="28" height="28">
+                        </a>
+                        <a href="https://www.instagram.com/collectorsplaybook/" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/svgs/brands/instagram.svg" alt="Instagram" width="28" height="28">
+                        </a>
+                        <a href="https://www.facebook.com/collectorsplaybook" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/svgs/brands/facebook.svg" alt="Facebook" width="28" height="28">
+                        </a>
+                        <a href="https://www.ebay.com/str/collectorsplaybooktx" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 640 512">
+                                <path fill="currentColor" d="M606 189.5l-54.8 109.9-54.9-109.9h-37.5l10.9 20.6c-11.5-19-35.9-26-63.3-26-31.8 0-67.9 8.7-71.5 43.1h33.7c1.4-13.8 15.7-21.8 35-21.8 26 0 41 9.6 41 33v3.4c-12.7 0-28 .1-41.7 .4-42.4 .9-69.6 10-76.7 34.4 1-5.2 1.5-10.6 1.5-16.2 0-52.1-39.7-76.2-75.4-76.2-21.3 0-43 5.5-58.7 24.2v-80.6h-32.1v169.5c0 10.3-.6 22.9-1.1 33.1h31.5c.7-6.3 1.1-12.9 1.1-19.5 13.6 16.6 35.4 24.9 58.7 24.9 36.9 0 64.9-21.9 73.3-54.2-.5 2.8-.7 5.8-.7 9 0 24.1 21.1 45 60.6 45 26.6 0 45.8-5.7 61.9-25.5 0 6.6 .3 13.3 1.1 20.2h29.8c-.7-8.2-1-17.5-1-26.8v-65.6c0-9.3-1.7-17.2-4.8-23.8l61.5 116.1-28.5 54.1h35.9L640 189.5zM243.7 313.8c-29.6 0-50.2-21.5-50.2-53.8 0-32.4 20.6-53.8 50.2-53.8 29.8 0 50.2 21.4 50.2 53.8 0 32.3-20.4 53.8-50.2 53.8zm200.9-47.3c0 30-17.9 48.4-51.6 48.4-25.1 0-35-13.4-35-25.8 0-19.1 18.1-24.4 47.2-25.3 13.1-.5 27.6-.6 39.4-.6zm-411.9 1.6h128.8v-8.5c0-51.7-33.1-75.4-78.4-75.4-56.8 0-83 30.8-83 77.6 0 42.5 25.3 74 82.5 74 31.4 0 68-11.7 74.4-46.1h-33.1c-12 35.8-87.7 36.7-91.2-21.6zm95-21.4H33.3c6.9-56.6 92.1-54.7 94.4 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/all-cards.html">All Cards</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/guide.html">Collecting Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                        <li><a href="/grading-guide.html">Grading Guide</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="/terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024-2025 Collectors Playbook. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navbarNav = document.getElementById('navbarNav');
+        
+        mobileMenuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navbarNav.classList.toggle('active');
+        });
+        
+        const navLinks = navbarNav.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                navbarNav.classList.remove('active');
+            });
+        });
+        
+        // Handle dropdown toggle on mobile
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdown = document.querySelector('.dropdown');
+        
+        if (dropdownToggle) {
+            dropdownToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (window.innerWidth <= 768) {
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+        
+        // Close dropdown when clicking dropdown links on mobile
+        const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    mobileMenuToggle.classList.remove('active');
+                    navbarNav.classList.remove('active');
+                    dropdown.classList.remove('active');
+                }
+            });
+        });
+    });
+    </script>
+    
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6c13ae2ab85a4e75962a3c26fa20159c"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

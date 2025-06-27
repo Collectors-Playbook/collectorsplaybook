@@ -22,6 +22,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Collectors Playbook</title>
+    <meta name="description" content="Contact Collectors Playbook for questions about sports cards, special requests, or general inquiries. Connect via eBay, Instagram, Twitter, or our contact form.">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -34,11 +35,23 @@
                 <img src="logo.png" alt="Collectors Playbook Logo">
                 <span>Collectors Playbook</span>
             </a>
-            <ul class="navbar-nav">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-nav" id="navbarNav">
                 <li><a class="nav-link" href="index.html">Home</a></li>
                 <li><a class="nav-link" href="all-cards.html">All Cards</a></li>
-                <li><a class="nav-link" href="index.html#featured">Featured</a></li>
-                <li><a class="nav-link" href="index.html#about">About</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" onclick="return false;">Resources</a>
+                    <div class="dropdown-menu">
+                        <a href="guide.html">Collecting Guide</a>
+                        <a href="grading-guide.html">Grading Guide</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </li>
                 <li><a class="nav-link nav-cta" href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -132,31 +145,14 @@
                         </div>
                     </div>
 
-                    <!-- FAQ Section -->
-                    <div style="margin-bottom: 3rem;">
-                        <h3 style="color: var(--primary-navy); margin-bottom: 2rem; font-size: 1.5rem; text-align: center;">Frequently Asked Questions</h3>
-                        
-                        <div style="display: flex; flex-direction: column; gap: 1rem;">
-                            <div style="background-color: white; border-radius: 8px; padding: 1.5rem; box-shadow: var(--card-shadow);">
-                                <h4 style="color: var(--primary-navy); margin-bottom: 0.75rem; font-size: 1.1rem;">How do I purchase a card?</h4>
-                                <p style="margin: 0; color: var(--text-gray); line-height: 1.6;">Click "View Details" on any card to be taken directly to our eBay listing. All purchases are processed securely through eBay's platform.</p>
-                            </div>
-                            
-                            <div style="background-color: white; border-radius: 8px; padding: 1.5rem; box-shadow: var(--card-shadow);">
-                                <h4 style="color: var(--primary-navy); margin-bottom: 0.75rem; font-size: 1.1rem;">Are all cards authentic?</h4>
-                                <p style="margin: 0; color: var(--text-gray); line-height: 1.6;">Yes! We take authenticity seriously. Graded cards come with certification from PSA, SGC, or BGS. All cards are carefully inspected before listing.</p>
-                            </div>
-                            
-                            <div style="background-color: white; border-radius: 8px; padding: 1.5rem; box-shadow: var(--card-shadow);">
-                                <h4 style="color: var(--primary-navy); margin-bottom: 0.75rem; font-size: 1.1rem;">How fast do you ship?</h4>
-                                <p style="margin: 0; color: var(--text-gray); line-height: 1.6;">We ship within 1-2 business days of payment. All cards are carefully packaged to ensure they arrive in perfect condition.</p>
-                            </div>
-                            
-                            <div style="background-color: white; border-radius: 8px; padding: 1.5rem; box-shadow: var(--card-shadow);">
-                                <h4 style="color: var(--primary-navy); margin-bottom: 0.75rem; font-size: 1.1rem;">Can I request specific cards?</h4>
-                                <p style="margin: 0; color: var(--text-gray); line-height: 1.6;">Absolutely! Send us a message on Instagram or Twitter with what you're looking for, and we'll do our best to help you find it.</p>
-                            </div>
-                        </div>
+                    <!-- Have Questions Section -->
+                    <div style="margin-bottom: 3rem; text-align: center;">
+                        <h3 style="color: var(--primary-navy); margin-bottom: 1.5rem; font-size: 1.5rem;">Have Questions?</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1.5rem; font-size: 1.1rem;">Check out our comprehensive FAQ page for answers to common questions about purchasing, shipping, grading, and more.</p>
+                        <a href="/faq.html" class="btn btn-primary">
+                            <i class="fas fa-question-circle" style="margin-right: 0.5rem;"></i>
+                            View FAQ
+                        </a>
                     </div>
 
                     <!-- Response Times -->
@@ -216,6 +212,51 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navbarNav = document.getElementById('navbarNav');
+        
+        mobileMenuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navbarNav.classList.toggle('active');
+        });
+        
+        const navLinks = navbarNav.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                navbarNav.classList.remove('active');
+            });
+        });
+        
+        // Handle dropdown toggle on mobile
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdown = document.querySelector('.dropdown');
+        
+        if (dropdownToggle) {
+            dropdownToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (window.innerWidth <= 768) {
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+        
+        // Close dropdown when clicking dropdown links on mobile
+        const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    mobileMenuToggle.classList.remove('active');
+                    navbarNav.classList.remove('active');
+                    dropdown.classList.remove('active');
+                }
+            });
+        });
+    });
+    </script>
     
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6c13ae2ab85a4e75962a3c26fa20159c"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
