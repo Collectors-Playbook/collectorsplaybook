@@ -80,6 +80,7 @@ img.loaded {
     align-items: center;
     gap: 2rem;
     list-style: none;
+    position: relative;
 }
 
 .nav-link {
@@ -146,7 +147,8 @@ img.loaded {
     transition: all 0.3s ease;
     margin-top: 0.5rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 1000;
+    z-index: 9999;
+    display: block !important;
 }
 
 /* Desktop hover state */
@@ -155,7 +157,18 @@ img.loaded {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
+        pointer-events: auto;
     }
+}
+
+/* Ensure dropdown menu is not interactive when hidden */
+.dropdown-menu {
+    pointer-events: none;
+}
+
+/* Make dropdown menu interactive when visible */
+.dropdown:hover .dropdown-menu {
+    pointer-events: auto;
 }
 
 .dropdown-menu a {

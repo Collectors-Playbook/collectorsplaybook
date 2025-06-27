@@ -47,7 +47,7 @@
                 <li><a class="nav-link" href="/all-cards.html">All Cards</a></li>
                 <li><a class="nav-link" href="/about.html">About</a></li>
                 <li class="dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" onclick="return false;">Resources</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">Resources</a>
                     <div class="dropdown-menu">
                         <a href="/guide.html">Collecting Guide</a>
                         <a href="/grading-guide.html">Grading Guide</a>
@@ -483,16 +483,41 @@
             });
         });
         
-        // Handle dropdown toggle on mobile
-        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        // Handle dropdown for both desktop and mobile
         const dropdown = document.querySelector('.dropdown');
-        
-        if (dropdownToggle) {
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        if (dropdown && dropdownToggle && dropdownMenu) {
+            // For desktop - ensure hover works
+            if (window.innerWidth > 768) {
+                dropdown.addEventListener('mouseenter', function() {
+                    dropdownMenu.style.opacity = '1';
+                    dropdownMenu.style.visibility = 'visible';
+                    dropdownMenu.style.transform = 'translateY(0)';
+                });
+                
+                dropdown.addEventListener('mouseleave', function() {
+                    dropdownMenu.style.opacity = '0';
+                    dropdownMenu.style.visibility = 'hidden';
+                    dropdownMenu.style.transform = 'translateY(-10px)';
+                });
+            }
+            
+            // For mobile - click toggle
             dropdownToggle.addEventListener('click', function(e) {
                 e.preventDefault();
+                e.stopPropagation();
                 if (window.innerWidth <= 768) {
                     dropdown.classList.toggle('active');
                 }
+            });
+        }
+
+        // Prevent dropdown from closing when clicking inside it
+        if (dropdownMenu) {
+            dropdownMenu.addEventListener('click', function(e) {
+                e.stopPropagation();
             });
         }
         
