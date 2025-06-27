@@ -26,6 +26,18 @@
     <link rel="canonical" href="https://collectorsplaybook.com/guide.html">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- Inline dropdown fix for testing -->
+    <style>
+    @media (min-width: 769px) {
+        .navbar-nav .dropdown:hover .dropdown-menu {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+            pointer-events: auto !important;
+            display: block !important;
+        }
+    }
+    </style>
     <style>
         .guide-section {
             margin-bottom: 2rem;
