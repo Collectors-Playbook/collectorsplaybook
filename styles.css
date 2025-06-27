@@ -83,6 +83,10 @@ img.loaded {
     position: relative;
 }
 
+.navbar-nav li {
+    position: relative;
+}
+
 .nav-link {
     color: white;
     text-decoration: none;
@@ -116,6 +120,11 @@ img.loaded {
     display: inline-block;
 }
 
+/* Ensure dropdown stays in document flow */
+.navbar-nav .dropdown {
+    position: relative !important;
+}
+
 .dropdown-toggle {
     display: flex;
     align-items: center;
@@ -135,7 +144,7 @@ img.loaded {
 
 .dropdown-menu {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 0.5rem);
     left: 0;
     background-color: var(--primary-navy);
     min-width: 200px;
@@ -144,21 +153,10 @@ img.loaded {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: all 0.3s ease;
-    margin-top: 0.5rem;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 9999;
     display: block !important;
-}
-
-/* Desktop hover state */
-@media (min-width: 769px) {
-    .dropdown:hover .dropdown-menu {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
 }
 
 /* Ensure dropdown menu is not interactive when hidden */
@@ -166,9 +164,38 @@ img.loaded {
     pointer-events: none;
 }
 
-/* Make dropdown menu interactive when visible */
-.dropdown:hover .dropdown-menu {
-    pointer-events: auto;
+/* Desktop hover state - CSS only solution */
+@media (min-width: 769px) {
+    /* Show dropdown on hover */
+    .navbar-nav li.dropdown:hover > .dropdown-menu,
+    .navbar-nav .dropdown:hover .dropdown-menu,
+    .dropdown:hover > .dropdown-menu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+        pointer-events: auto !important;
+        display: block !important;
+    }
+    
+    /* Keep dropdown visible when hovering on menu itself */
+    .dropdown-menu:hover {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+        pointer-events: auto !important;
+        display: block !important;
+    }
+    
+    /* Keep dropdown visible when hovering between toggle and menu */
+    .dropdown::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: -20px;
+        right: -20px;
+        height: 20px;
+        z-index: 9998;
+    }
 }
 
 .dropdown-menu a {
